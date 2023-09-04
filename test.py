@@ -1,5 +1,4 @@
 from main import t_flow
 
-def test_t_flow(a):
-    assert t_flow=='2.13.0'
-    print('passed')
+def test_t_flow(t_flow):
+    assert t_flow()=='2.13.0'

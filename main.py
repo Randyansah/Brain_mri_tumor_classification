@@ -20,8 +20,7 @@ import os
 import io
 import argparse
 
-def t_flow(a):
-    a=2+a
+def t_flow():
     a=print(f'{tf.version.VERSION}')
     return a
 
@@ -30,7 +29,7 @@ def main():
     train_model()
     predict()
 
-def load_dataset(dataset_dir):
+def load_dataset(train_dir,test_dir):
     global x_train,x_val,x_test,y_train,y_val,y_test,image_size
     labels = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
@@ -43,7 +42,7 @@ def load_dataset(dataset_dir):
 
 
     for label in labels:
-        trainPath = os.path.join(dataset_dir,label)
+        trainPath = os.path.join(train_dir,label)
         for file in tqdm(os.listdir(trainPath)):
             image = cv2.imread(os.path.join(trainPath, file),0) # load images in gray.
             image = cv2.bilateralFilter(image, 2, 50, 50) # remove images noise.
@@ -52,7 +51,7 @@ def load_dataset(dataset_dir):
             x_train.append(image)
             y_train.append(labels.index(label))
         
-        testPath = os.path.join('D:\ML\Dataset\MRI_DATASET\Data\Testing',label)
+        testPath = os.path.join(test_dir,label)
         for file in tqdm(os.listdir(testPath)):
             image = cv2.imread(os.path.join(testPath, file),0)
             image = cv2.bilateralFilter(image, 2, 50, 50)
