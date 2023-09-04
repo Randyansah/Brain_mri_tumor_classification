@@ -20,9 +20,8 @@ import os
 import io
 import argparse
 
-def t_flow():
-    a=print(f'{tf.version.VERSION}')
-    return a
+def add(x):
+    return x + 1 
 
 def main():
     load_dataset()

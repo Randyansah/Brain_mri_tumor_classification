@@ -1,4 +1,4 @@
-from main import t_flow
+from main import add
 
-def test_t_flow(t_flow):
-    assert t_flow()=='2.13.0'
+def test_add():
+    assert add(4)==5

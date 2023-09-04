@@ -54,6 +54,7 @@ pip install pandas
 pip install scikit-learn
 pip install numpy
 pip install nltk
+pip install seaborn
 pip install transformers
 pip install keras
 pip install torch
@@ -74,11 +75,15 @@ pip install nbval
     |--workflows
         |--main.yml
 |--__init__.py
+|--.gitignore
 |--LICENSE.md
 |--main.py
 |--Makefile
 |--README.md
-|--rewuirements.txt
+|--requirements.txt
+|--setup.py
+|--Te-no_0011.jpg
+|--test.py
 ```
 
 ## AUTHOR
