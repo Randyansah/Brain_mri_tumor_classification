@@ -7,7 +7,11 @@ keras
 torch
 tensorflow
 matplotlib
-torch
 opencv-python
 scikit-image
 gradio
+pytest
+pylint
+pytest-cov
+pandas
+nbval

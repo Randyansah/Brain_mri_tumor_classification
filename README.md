@@ -44,6 +44,10 @@ The various libraries were used in this project.
 * **scikit-image**
 * **matplotlib**
 * **gradio**
+* **pytest**
+* **pylint**
+* **pytest-cov**
+* **nbval**
 
 ```
 pip install pandas 
@@ -58,6 +62,10 @@ pip install matplotlib
 pip install opencv-python
 pip install scikit-image
 pip install gradio
+pip install pytest
+pip install pylint
+pip install pytest-cov
+pip install nbval
 ```
 
 ## PROJECT FILE STRUCTURE
