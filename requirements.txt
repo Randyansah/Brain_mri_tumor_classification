@@ -1,0 +1,13 @@
+pandas 
+scikit-learn
+numpy
+nltk
+transformers
+keras
+torch
+tensorflow
+matplotlib
+torch
+opencv-python
+scikit-image
+gradio
