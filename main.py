@@ -22,7 +22,7 @@ import argparse
 
 def t_flow(a):
     a=2+a
-    a=print('{tf.version.VERSION}')
+    a=print(f'{tf.version.VERSION}')
     return a
 
 def main():
