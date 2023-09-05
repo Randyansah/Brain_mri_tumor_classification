@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest --nbval test.py
+	python -m pytest -vv --cov=main test.py
 
 format:
 	black *.py
@@ -13,5 +13,5 @@ lint:
 
 deploy:
 	#echo "deploy goes here"
-	
+
 all: install lint test
