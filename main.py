@@ -132,6 +132,7 @@ def command_li():
     parser=argparse.ArgumentParser(description='This app classifies mri brain tumor into gloima,meningioma and pituitary')     
     parser.add_argument("--main",help="Use --main to run the program",action="store_true") 
     args=parser.parse_args()  
+    return args
     
 if __name__=="__command_li__":
     command_li()    
