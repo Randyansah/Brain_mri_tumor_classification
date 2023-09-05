@@ -14,5 +14,5 @@ gradio
 pytest
 pylint
 pytest-cov
-pandas
-nbval
+unicorn
+black

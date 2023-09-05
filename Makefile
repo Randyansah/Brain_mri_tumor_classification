@@ -11,4 +11,7 @@ format:
 lint:
 	pylint --disable=R,C main.py 
 
+deploy:
+	#echo "deploy goes here"
+	
 all: install lint test

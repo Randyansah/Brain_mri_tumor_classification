@@ -1,6 +1,11 @@
 name: Python application test with Github Actions
 
-on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -8,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10.12
       uses: actions/setup-python@v1
       with:
@@ -19,3 +24,9 @@ jobs:
     - name: Test with pytest
       run: |
         make test
+    - name: format
+      run: |
+        make format    
+    - name: lint
+      run: |
+        make lint   
