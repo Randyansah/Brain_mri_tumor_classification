@@ -27,6 +27,6 @@ jobs:
     - name: format
       run: |
         make format    
-    - name: lint
+    - name: lint with pylint
       run: |
         make lint   
