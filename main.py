@@ -23,6 +23,10 @@ import argparse
 def add(x):
     return x + 1 
 
+def tf_version(name=tf.version.VERSION):
+    version=f"Python version is {name}"
+    return version
+
 def main():
     load_dataset()
     train_model()
