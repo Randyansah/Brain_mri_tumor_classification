@@ -2,6 +2,10 @@ import tensorflow as tf
 import os
 import numpy as np
 
+tf.debugging.set_log_device_placement(True)
+gpus = tf.config.list_logical_devices('GPU')
+tf.distribute.MirroredStrategy(gpus)
+
 def predict(model,dir,filename):
     image_dir=os.path.join(dir,filename)
     mri_image=(image_dir)

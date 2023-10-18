@@ -6,6 +6,11 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 import os
 
+tf.debugging.set_log_device_placement(True)
+gpus = tf.config.list_logical_devices('GPU')
+tf.distribute.MirroredStrategy(gpus)
+
+
 def load_dataset(train_dir,test_dir):
     global x_train,x_val,x_test,y_train,y_val,y_test,image_size
     labels = ['glioma', 'meningioma', 'notumor', 'pituitary']

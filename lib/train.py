@@ -4,6 +4,12 @@ from keras.models import Sequential,Model
 from keras.applications.resnet import ResNet50
 import keras
 from keras.preprocessing.image import ImageDataGenerator
+import tensorflow as tf
+
+tf.debugging.set_log_device_placement(True)
+gpus = tf.config.list_logical_devices('GPU')
+tf.distribute.MirroredStrategy(gpus)
+
 
 def train_model(x_train,y_train,x_val,y_val,img_size):
     datagen=ImageDataGenerator(
@@ -13,7 +19,6 @@ def train_model(x_train,y_train,x_val,y_val,img_size):
         horizontal_flip=True
     )
     datagen.fit(x_train)
-    global model
     net = ResNet50(
     weights='imagenet', # Load weights pre-trained on ImageNet.
      include_top=False, # Do not include the ImageNet classifier at the top.
